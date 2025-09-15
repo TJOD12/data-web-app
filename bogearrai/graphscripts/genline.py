@@ -51,13 +51,8 @@ def draw(filtered_df, c1, c2, c3):
 
 def generateGraph(counties):
     df = getCSV("bogearrai/util/historical.csv")
-    
-    print(df)
 
     filtered_df = df[df['Sex']=="Both sexes"]
-
-    print(counties["c1"], counties["c2"], counties["c3"])
-    print(filtered_df['County'])
 
     c1, c2, c3 = counties["c1"].capitalize(), counties["c2"].capitalize(), counties["c3"].capitalize()
     c1_df = filtered_df[filtered_df['County']==c1]

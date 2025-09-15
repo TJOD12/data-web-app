@@ -19,7 +19,11 @@ def process_data(request):
 
         graph = gl.generateGraph(requested_counties)
 
-        context = {"graph": graph}
+        context = {"graph": graph,
+                    "c1": county1,
+                    "c2": county2,
+                    "c3": county3
+                    }
 
         return render(request, 'bogearrai/displayGraph.html', context)
     return render(request, 'bogearrai/displayGraph.html')

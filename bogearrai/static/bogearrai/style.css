@@ -101,3 +101,8 @@ img {
     justify-content: center:
     align-items: center;
 }
+
+.counties-list-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}

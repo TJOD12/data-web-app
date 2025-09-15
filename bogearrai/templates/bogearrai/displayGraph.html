@@ -13,12 +13,14 @@
         <div><input placeholder="Search..."></input></div>
     </header>
     <main>
-        <h2>Selected Counties</h2>
-        <ul>
-            <li>{{ county1 }}</li>
-            <li>{{ county2 }}</li>
-            <li>{{ county3 }}</li>
-        </ul>
+        <section>
+            <h2>Selected Counties</h2>
+            <section class="counties-list-container">
+                <div>{{ c1 }}</div>
+                <div>{{ c2 }}</div>
+                <div>{{ c3 }}</div>
+            </section>
+        </section>  
         <section class="graph-container">
             {% if graph %}
                 <h3>Generated Graph</h3>

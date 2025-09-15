@@ -10,6 +10,8 @@ header {
     background-color: #4CAF50;
     color: white;
     padding: 10px;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
 }
 
 h1 {
@@ -88,4 +90,8 @@ main {
     padding: 5px;
     border: .5px solid #666;
     border-radius: 10px;
+}
+
+img {
+    width: 40%;
 }

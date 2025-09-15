@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bogearrai/style.css' %}">
+</head>
+<body>
+    <header>
+        <div></div>
+        <h1>Irish County Populations</h1>
+        <div><input placeholder="Search..."></input></div>
+    </header>
+    <main>
+        <h2>Selected Counties</h2>
+        <ul>
+            <li>{{ county1 }}</li>
+            <li>{{ county2 }}</li>
+            <li>{{ county3 }}</li>
+        </ul>
+
+        {% if graph %}
+            <h3>Generated Graph</h3>
+            <img src="data:image/png;base64,{{ graph }}" alt="County Graph">
+        {% endif %}
+    </main>
+</body>
+</html>

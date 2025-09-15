@@ -13,7 +13,7 @@ def getCSV(url):
     return dfl
 
 def draw(filtered_df, c1, c2, c3):
-        fig, ax = plt.subplots(1, 1, figsize=(10, 6))
+        fig, ax = plt.subplots(1, 1, figsize=(12, 8))
 
         print(filtered_df["c1"])
 

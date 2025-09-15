@@ -19,11 +19,12 @@
             <li>{{ county2 }}</li>
             <li>{{ county3 }}</li>
         </ul>
-
-        {% if graph %}
-            <h3>Generated Graph</h3>
-            <img src="data:image/png;base64,{{ graph }}" alt="County Graph">
-        {% endif %}
+        <section class="graph-container">
+            {% if graph %}
+                <h3>Generated Graph</h3>
+                <img src="data:image/png;base64,{{ graph }}" alt="County Graph">
+            {% endif %}
+        </section>
     </main>
 </body>
 </html>

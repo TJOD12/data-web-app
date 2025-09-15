@@ -95,3 +95,9 @@ main {
 img {
     width: 40%;
 }
+
+.graph-container {
+    display: flex;
+    justify-content: center:
+    align-items: center;
+}

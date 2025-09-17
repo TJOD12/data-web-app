@@ -13,6 +13,23 @@
         <div><input placeholder="Search..."></input></div>
     </header>
     <main>
+        <section class="graph-card">
+            {% if graph %}
+            <div class="graph-card__inner">
+                <h3 id="graph-title" class="graph-card__title">Generated Graph</h3>
+                <div class="graph-column-display">
+                    <div>
+                        <img src="data:image/png;base64,{{ graph }}" alt="County Graph" id="graphImage">
+                    </div>
+                    <div class="graph-widgets-container">
+                        <button class="graph-button" id="expandBtn">Expand</button>
+                        <a href="data:image/png;base64,{{ graph }}" download="counties_graph.png">
+                            <button class="graph-button">Download Graph</button>
+                        </a>
+                    </div>
+                </div>
+            {% endif %}
+        </section>
         <section>
             <h2>Selected Counties</h2>
             <section class="counties-list-container">
@@ -21,21 +38,16 @@
                 <div>{{ c3 }}</div>
             </section>
         </section>  
-        <section class="graph-card">
-            {% if graph %}
-            <div class="graph-card__inner">
-                <h3 id="graph-title" class="graph-card__title">Generated Graph</h3>
-                <div class="graph-column-display">
-                    <div>
-                        <img src="data:image/png;base64,{{ graph }}" alt="County Graph">
-                    </div>
-                    <div class="graph-widgets-container">
-                        <button></button>
-                        <button></button>
-                    </div>
-                </div>
-            {% endif %}
-        </section>
     </main>
 </body>
+<script>
+    const img = document.getElementById("graphImage");
+    const btn = document.getElementById("expandBtn");
+
+    btn.addEventListener("click", () => {
+        img.classList.toggle("expanded");
+        btn.classList.toggle("expanded");
+        btn.textContent = img.classList.contains("expanded") ? "Close" : "Expand";
+    });
+</script>
 </html>

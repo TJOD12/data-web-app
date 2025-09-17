@@ -112,6 +112,7 @@ img {
   display: flex;
   justify-content: center;
   padding: 1rem; 
+  margin-top: 1.5rem;
 }
 
 .graph-card__inner {
@@ -132,16 +133,32 @@ img {
   color: #2c3e50;
 }
 
-.graph-card img {
-  width: 560px;
+#graphImage {
+  width: 600px;
   height: auto;
   border-radius: 0.5rem;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
+#graphImage.expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: #fff;
+    padding: 0.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+}
+
 .graph-column-display {
     display: grid;
-    grid-template-columns: 90% 10%;
+    grid-template-columns: 85% 15%;
 }
 
 .graph-widgets-container {
@@ -149,6 +166,26 @@ img {
     grid-template-rows: auto auto;
     gap: 10%;
     height: 20%;
+}
+
+.graph-button {
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 0px;
+    font-weight: 500;
+}
+
+.graph-button:hover {
+    background-color: #e3eee3ff;
+}
+
+#expandBtn.expanded {
+    position: fixed;
+    top: 5%;
+    width: 10%;
+    right: 45%;
+    z-index: 1001;
 }
 
 @keyframes fadeIn {

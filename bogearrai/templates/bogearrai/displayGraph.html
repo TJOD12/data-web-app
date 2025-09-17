@@ -25,7 +25,15 @@
             {% if graph %}
             <div class="graph-card__inner">
                 <h3 id="graph-title" class="graph-card__title">Generated Graph</h3>
-                <img src="data:image/png;base64,{{ graph }}" alt="County Graph">
+                <div class="graph-column-display">
+                    <div>
+                        <img src="data:image/png;base64,{{ graph }}" alt="County Graph">
+                    </div>
+                    <div class="graph-widgets-container">
+                        <button></button>
+                        <button></button>
+                    </div>
+                </div>
             {% endif %}
         </section>
     </main>

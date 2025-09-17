@@ -21,9 +21,10 @@
                 <div>{{ c3 }}</div>
             </section>
         </section>  
-        <section class="graph-container">
+        <section class="graph-card">
             {% if graph %}
-                <h3>Generated Graph</h3>
+            <div class="graph-card__inner">
+                <h3 id="graph-title" class="graph-card__title">Generated Graph</h3>
                 <img src="data:image/png;base64,{{ graph }}" alt="County Graph">
             {% endif %}
         </section>

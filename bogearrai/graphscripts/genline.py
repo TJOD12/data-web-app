@@ -23,9 +23,9 @@ def draw(filtered_df, c1, c2, c3):
 
         title_string = 'Population of counties '+c1+', '+c2+', '+c3+', 1841 - 2022.'
 
-        ax.set_xlabel("Year")
-        ax.set_ylabel("Population")
-        ax.set_title(title_string)
+        ax.set_xlabel("Year", fontsize=16)
+        ax.set_ylabel("Population", fontsize=16)
+        ax.set_title(title_string, fontsize=14)
         ax.set_facecolor('#EEEEEE') 
         ax.legend()
         plt.grid(True, axis="y")

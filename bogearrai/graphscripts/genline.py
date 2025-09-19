@@ -64,7 +64,13 @@ def generateGraph(counties):
         "c3":c3_df
     }
 
-    #print(df_map)
-
     graph = draw(df_map, c1, c2, c3)
-    return graph
+
+    pop_map = {}
+    for county, df in df_map.items():
+        year = df['CensusYear'].tolist()
+        pop = df['VALUE'].tolist()
+        list_pop = list(zip(year, pop))
+        pop_map[county] = list_pop
+        
+    return graph, pop_map

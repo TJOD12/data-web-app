@@ -31,9 +31,69 @@
         <section>
             <h2>Selected Counties</h2>
             <section class="counties-list-container">
-                <div>{{ c1 }}</div>
-                <div>{{ c2 }}</div>
-                <div>{{ c3 }}</div>
+                <div>
+                    {% for county in c1.keys %}
+                        <h3>{{ county }}</h3>
+                    {% endfor %}
+                    <div class=table-container>
+                        <table>
+                            <tr>
+                                <th><i>Year</i></th>
+                                <th><i>Population</i></th>
+                            </tr>
+                            {% for val in c1.values %}
+                                {% for pair in val %}
+                                    <tr>
+                                        <td>{{ pair.0 }}</td>
+                                        <td>{{ pair.1 }}</td>
+                                    </tr>
+                                {% endfor %}
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    {% for county in c2.keys %}
+                        <h3>{{ county }}</h3>   
+                    {% endfor %}
+                    <div class=table-container>
+                        <table>
+                            <tr>
+                                <th>Year</th>
+                                <th>Population</th>
+                            </tr>
+                            {% for val in c2.values %}
+                                {% for pair in val %}
+                                    <tr>
+                                        <td>{{ pair.0 }}</td>
+                                        <td>{{ pair.1 }}</td>
+                                    </tr>
+                                {% endfor %}
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    {% for county in c3.keys %}
+                        <h3>{{ county }}</h3>
+                    {% endfor %}
+                    <div class=table-container>
+                        <table>
+                            <tr>
+                                <th>Year</th>
+                                <th>Population</th>
+                            </tr>
+                            {% for val in c3.values %}
+                                {% for pair in val %}
+                                    <tr>
+                                        <td>{{ pair.0 }}</td>
+                                        <td>{{ pair.1 }}</td>
+                                    </tr>
+                                {% endfor %}
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
             </section>
         </section>  
     </main>

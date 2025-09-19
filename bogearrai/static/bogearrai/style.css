@@ -105,8 +105,13 @@ img {
 .counties-list-container {
     display: grid;
     grid-template-columns: auto auto auto;
+    gap: 10px;
 }
 
+.table-container {
+    display: flex;
+    justify-content: center;
+}
 
 .graph-card {
   display: flex;
@@ -186,6 +191,16 @@ img {
     width: 10%;
     right: 45%;
     z-index: 1001;
+}
+
+table {
+    border: solid 1px #444;
+    padding: 5px;
+    background-color: #fff;
+}
+
+table tr td {
+    padding: 5px;
 }
 
 @keyframes fadeIn {

@@ -17,13 +17,22 @@ def process_data(request):
             "c3": county3,
         }
 
-        graph = gl.generateGraph(requested_counties)
+        graph, pop_list = gl.generateGraph(requested_counties)
 
         context = {"graph": graph,
-                    "c1": county1,
-                    "c2": county2,
-                    "c3": county3
+                    "c1": {county1: pop_list["c1"]},
+                    "c2": {county2: pop_list["c2"]},
+                    "c3": {county3: pop_list["c3"]},
+                    "popdata": pop_list 
                     }
 
         return render(request, 'bogearrai/displayGraph.html', context)
     return render(request, 'bogearrai/displayGraph.html')
+
+# {% for row in popdata.values %}
+#                         {% for item in row %}
+#                             {% for val in item %}
+#                                 {{ val }}
+#                             {% endfor %}
+#                         {% endfor %}
+#                     {% endfor %}

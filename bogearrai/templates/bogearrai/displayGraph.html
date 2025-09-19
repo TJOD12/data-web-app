@@ -23,9 +23,7 @@
                     </div>
                     <div class="graph-widgets-container">
                         <button class="graph-button" id="expandBtn">Expand</button>
-                        <a href="data:image/png;base64,{{ graph }}" download="counties_graph.png">
-                            <button class="graph-button">Download Graph</button>
-                        </a>
+                        <button class="graph-button" id="downloadBtn">Download Graph</button>
                     </div>
                 </div>
             {% endif %}
@@ -49,5 +47,13 @@
         btn.classList.toggle("expanded");
         btn.textContent = img.classList.contains("expanded") ? "Close" : "Expand";
     });
+
+    const dwnl = document.getElementById("downloadBtn")
+    dwnl.addEventListener("click", () => {
+        const a = document.createElement('a');
+        a.href = "data:image/png;base64,{{ graph }}";
+        a.download = "counties_graph.png";
+        a.click();
+    })
 </script>
 </html>

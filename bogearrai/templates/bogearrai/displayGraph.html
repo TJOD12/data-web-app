@@ -13,89 +13,92 @@
         <div><input placeholder="Search..."></input></div>
     </header>
     <main>
-        <section class="graph-card">
-            {% if graph %}
-            <div class="graph-card__inner">
-                <h3 id="graph-title" class="graph-card__title">Generated Graph</h3>
-                <div class="graph-column-display">
-                    <div>
-                        <img src="data:image/png;base64,{{ graph }}" alt="County Graph" id="graphImage">
+        <span class="home-link"><a href="{% url 'home' %}" class="btn">Home</a></span>
+        <section class="main-section">
+            <section class="graph-card">
+                {% if graph %}
+                <div class="graph-card__inner">
+                    <h3 id="graph-title" class="graph-card__title">Generated Graph</h3>
+                    <div class="graph-column-display">
+                        <div>
+                            <img src="data:image/png;base64,{{ graph }}" alt="County Graph" id="graphImage">
+                        </div>
+                        <div class="graph-widgets-container">
+                            <button class="graph-button" id="expandBtn">Expand</button>
+                            <button class="graph-button" id="downloadBtn">Download Graph</button>
+                        </div>
                     </div>
-                    <div class="graph-widgets-container">
-                        <button class="graph-button" id="expandBtn">Expand</button>
-                        <button class="graph-button" id="downloadBtn">Download Graph</button>
-                    </div>
-                </div>
-            {% endif %}
-        </section>
-        <section>
-            <h2>Selected Counties</h2>
-            <section class="counties-list-container">
-                <div>
-                    {% for county in c1.keys %}
-                        <h3>{{ county }}</h3>
-                    {% endfor %}
-                    <div class=table-container>
-                        <table>
-                            <tr>
-                                <th><i>Year</i></th>
-                                <th><i>Population</i></th>
-                            </tr>
-                            {% for val in c1.values %}
-                                {% for pair in val %}
-                                    <tr>
-                                        <td>{{ pair.0 }}</td>
-                                        <td>{{ pair.1 }}</td>
-                                    </tr>
-                                {% endfor %}
-                            {% endfor %}
-                        </table>
-                    </div>
-                </div>
-                <div>
-                    {% for county in c2.keys %}
-                        <h3>{{ county }}</h3>   
-                    {% endfor %}
-                    <div class=table-container>
-                        <table>
-                            <tr>
-                                <th>Year</th>
-                                <th>Population</th>
-                            </tr>
-                            {% for val in c2.values %}
-                                {% for pair in val %}
-                                    <tr>
-                                        <td>{{ pair.0 }}</td>
-                                        <td>{{ pair.1 }}</td>
-                                    </tr>
-                                {% endfor %}
-                            {% endfor %}
-                        </table>
-                    </div>
-                </div>
-                <div>
-                    {% for county in c3.keys %}
-                        <h3>{{ county }}</h3>
-                    {% endfor %}
-                    <div class=table-container>
-                        <table>
-                            <tr>
-                                <th>Year</th>
-                                <th>Population</th>
-                            </tr>
-                            {% for val in c3.values %}
-                                {% for pair in val %}
-                                    <tr>
-                                        <td>{{ pair.0 }}</td>
-                                        <td>{{ pair.1 }}</td>
-                                    </tr>
-                                {% endfor %}
-                            {% endfor %}
-                        </table>
-                    </div>
-                </div>
+                {% endif %}
             </section>
-        </section>  
+            <section class="tables-card">
+                <h2>Selected Counties</h2>
+                <section class="counties-list-container">
+                    <div>
+                        {% for county in c1.keys %}
+                            <h3>{{ county }}</h3>
+                        {% endfor %}
+                        <div class=table-container>
+                            <table>
+                                <tr>
+                                    <th><i>Year</i></th>
+                                    <th><i>Population</i></th>
+                                </tr>
+                                {% for val in c1.values %}
+                                    {% for pair in val %}
+                                        <tr>
+                                            <td class="td-year">{{ pair.0 }}</td>
+                                            <td>{{ pair.1 }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                {% endfor %}
+                            </table>
+                        </div>
+                    </div>
+                    <div>
+                        {% for county in c2.keys %}
+                            <h3>{{ county }}</h3>   
+                        {% endfor %}
+                        <div class=table-container>
+                            <table>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Population</th>
+                                </tr>
+                                {% for val in c2.values %}
+                                    {% for pair in val %}
+                                        <tr>
+                                            <td class="td-year">{{ pair.0 }}</td>
+                                            <td>{{ pair.1 }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                {% endfor %}
+                            </table>
+                        </div>
+                    </div>
+                    <div>
+                        {% for county in c3.keys %}
+                            <h3>{{ county }}</h3>
+                        {% endfor %}
+                        <div class=table-container>
+                            <table>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Population</th>
+                                </tr>
+                                {% for val in c3.values %}
+                                    {% for pair in val %}
+                                        <tr>
+                                            <td class="td-year">{{ pair.0 }}</td>
+                                            <td>{{ pair.1 }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                {% endfor %}
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </section>  
+        </section>
     </main>
 </body>
 <script>

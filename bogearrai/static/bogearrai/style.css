@@ -42,6 +42,7 @@ p {
 
 .key-indicators-container span {
     font-size: 26pt;
+    color: #666;
 }
 
 #div-line {
@@ -93,9 +94,21 @@ p {
 }
 
 .form-inputs-container select {
-    padding: 5px;
-    border: .5px solid #666;
-    border-radius: 10px;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.form-inputs-container select:focus {
+    border-color: #42965aff;
+    box-shadow: 0 0 0 3px rgba(74, 226, 119, 0.3);
+    outline: none;
 }
 
 img {

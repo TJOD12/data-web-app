@@ -248,6 +248,26 @@ tr td {
     font-weight: bold;
 }
 
+footer {
+    background-color: #959595ff;
+    position: fixed; 
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    padding: 3% 0%;
+}
+
+.footer-content-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1%;
+}
+
+.footer-content-cols {
+    text-align: center;
+    color: white;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

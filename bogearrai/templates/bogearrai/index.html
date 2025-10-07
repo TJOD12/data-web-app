@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Home Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
     {% load static %}
     <link rel="stylesheet" href="{% static 'bogearrai/style.css' %}">
 </head>
@@ -124,9 +129,37 @@
     </main>
     <footer>
         <section class="footer-content-container">
-            <section class="footer-content-cols">a</section>
-            <section class="footer-content-cols">Need help?</section>
-            <section class="footer-content-cols">Follow us</section>
+            <section class="footer-content-cols"><h4></h4></section>
+            <section class="footer-content-cols">
+                <h4>Need help?</h4>
+                <section class="need-help-list">
+                    <section class="need-help-list-container">
+                        <ul>
+                            <li>&#8594;<span>Sitemap</span></li>
+                            <li>&#8594;<span>Links</span></li>
+                        </ul>
+                    </section>
+                </section>
+            </section>
+            <section class="footer-content-cols">
+                <h4>Follow us</h4>
+                <section class="links-container">
+                    <section class="social-links">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </section>
+                </section>
+            </section>
         </section>
     </footer>
 </body>

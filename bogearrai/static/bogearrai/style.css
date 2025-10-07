@@ -249,12 +249,12 @@ tr td {
 }
 
 footer {
-    background-color: #959595ff;
+    background-color: #c5c4c4ff;
     position: fixed; 
     left: 0%;
     bottom: 0%;
     width: 100%;
-    padding: 3% 0%;
+    padding: 1.5% 0%;
 }
 
 .footer-content-container {
@@ -267,6 +267,66 @@ footer {
     text-align: center;
     color: white;
 }
+
+.footer-content-cols h4 {
+    margin: 0px;
+}
+
+.need-help-list {
+    display: flex;
+    justify-content: center;
+}
+
+.need-help-list ul {
+    list-style: none; 
+    padding: 0;       
+    margin: 0;        
+}
+
+.need-help-list li {
+    margin-bottom: 8px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 60%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #edebebff;
+    cursor: pointer;
+    transition: color 0.4s ease;
+}
+
+.need-help-list li:hover {
+    color: #4CAF50;
+}
+
+.need-help-list-container {
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+.links-container {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #333;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+    color: #4CAF50;
+    transform: scale(1.1);
+}
+
+
 
 @keyframes fadeIn {
   from {

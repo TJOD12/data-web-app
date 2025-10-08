@@ -8,26 +8,24 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
       referrerpolicy="no-referrer"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     {% load static %}
     <link rel="stylesheet" href="{% static 'bogearrai/style.css' %}">
 </head>
 <body>
     <header>
-        <div></div>
         <h1>Irish County Populations</h1>
-        <div><input placeholder="Search..."></input></div>
     </header>
     <main>
-            <section class="key-indicators-container">
+            <!-- <section class="key-indicators-container">
                 <span>Key Indicators</span><div id="div-line"></div>
-            </section>
+            </section> -->
             <section>
                 <section class="form-container">
                     <form method="POST" action="{% url 'process_data' %}">
                     {% csrf_token %}
                     <section class="form-inputs-container">
-                        <section>
-                            <label for="county1">County:</label>
+                        <section class="form-inner-container">
                             <select name="county1" id="county1">
                                 <option value="Carlow">Carlow</option>
                                 <option value="Cavan">Cavan</option>
@@ -38,7 +36,7 @@
                                 <option value="Galway">Galway</option>
                                 <option value="Kerry">Kerry</option>
                                 <option value="Kildare">Kildare</option>
-                                <option value="Kilkenny">Kilkenny</option>
+                                <option value="Kilkenny" selected>Kilkenny</option>
                                 <option value="Laois">Laois</option>
                                 <option value="Leitrim">Leitrim</option>
                                 <option value="Limerick">Limerick</option>
@@ -57,15 +55,14 @@
                                 <option value="Wicklow">Wicklow</option>
                             </select>
                         </section>
-                        <section>
-                            <label for="county2">County:</label>
+                        <section class="form-inner-container">
                             <select name="county2" id="county2">
                                <option value="Carlow">Carlow</option>
                                 <option value="Cavan">Cavan</option>
                                 <option value="Clare">Clare</option>
                                 <option value="Cork">Cork</option>
                                 <option value="Donegal">Donegal</option>
-                                <option value="Dublin">Dublin</option>
+                                <option value="Dublin" selected>Dublin</option>
                                 <option value="Galway">Galway</option>
                                 <option value="Kerry">Kerry</option>
                                 <option value="Kildare">Kildare</option>
@@ -88,13 +85,12 @@
                                 <option value="Wicklow">Wicklow</option>
                             </select>
                         </section>
-                        <section>
-                            <label for="county3">County:</label>
+                        <section class="form-inner-container">
                             <select name="county3" id="county3">
                                 <option value="Carlow">Carlow</option>
                                 <option value="Cavan">Cavan</option>
                                 <option value="Clare">Clare</option>
-                                <option value="Cork">Cork</option>
+                                <option value="Cork" selected>Cork</option>
                                 <option value="Donegal">Donegal</option>
                                 <option value="Dublin">Dublin</option>
                                 <option value="Galway">Galway</option>
@@ -121,7 +117,7 @@
                         </section>
                     </section>
                     <section class="submit-container">
-                        <button type="submit">Submit</button>
+                        <button type="submit" id="submit">Submit</button>
                     </section>
                     </form>
                 </section>

@@ -123,10 +123,16 @@
                 </section>
             </section>
             <section>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
+                <section class="check-container">
+                    <section class="checkbox-grid">
+                        <label id="labelSwitch">Bar Chart</label>
+                        <label class="switch">
+                            <input type="checkbox" id="checkboxSwitch">
+                            <span class="slider round"></span>
+                        </label>
+                    </section>
+                </section>
+                <div id="popup" class="popup">Updated chart type</div>
             </section>
     </main>
     <footer>
@@ -165,4 +171,15 @@
         </section>
     </footer>
 </body>
+<script>
+    const chartBtn = document.getElementById("checkboxSwitch");
+    const chartPop = document.getElementById("popup");
+
+    chartBtn.addEventListener("click", () => {
+        chartPop.classList.add("show");
+        setTimeout(() => {
+            popup.classList.remove("show");
+        }, 1000); 
+    });
+</script>
 </html>

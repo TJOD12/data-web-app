@@ -309,14 +309,14 @@ tr td {
   height: 16px;
   width: 16px;
   left: 2px;
-  bottom: 3.5px;
+  bottom: 3.2px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #6cb36fff;
 }
 
 input:checked + .slider:before {
@@ -332,6 +332,46 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.check-container {
+    position: absolute;
+    bottom: 27%;
+    right: 7%;
+    z-index: 10;
+    color: #666;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;  
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.popup {
+  visibility: hidden;        /* Hidden by default */
+  min-width: 100px;
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  padding: 12px;
+  position: fixed;
+  bottom: 45%;
+  right: 8%;
+  opacity: 0;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+  z-index: 1000;
+}
+
+.popup.show {
+  visibility: visible;
+  opacity: .65;
 }
 
 footer {

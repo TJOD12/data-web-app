@@ -130,6 +130,37 @@
                             <input type="checkbox" id="checkboxSwitch">
                             <span class="slider round"></span>
                         </label>
+                        <section id="yearContainer">
+                            <label id="labelYear">Year</label>
+                            <select name="year" id="selectYear">
+                                <option value="y_1841">1841</option>
+                                <option value="y_1851">1851</option>
+                                <option value="y_1861">1861</option>
+                                <option value="y_1871">1871</option>
+                                <option value="y_1881">1881</option>
+                                <option value="y_1891">1891</option>
+                                <option value="y_1901">1901</option>
+                                <option value="y_1911">1911</option>
+                                <option value="y_1926">1926</option>
+                                <option value="y_1936">1936</option>
+                                <option value="y_1946">1946</option>
+                                <option value="y_1951">1951</option>
+                                <option value="y_1956">1956</option>
+                                <option value="y_1961">1961</option>
+                                <option value="y_1966">1966</option>
+                                <option value="y_1971">1971</option>
+                                <option value="y_1979">1979</option>
+                                <option value="y_1981">1981</option>
+                                <option value="y_1986">1986</option>
+                                <option value="y_1991">1991</option>
+                                <option value="y_1996">1996</option>
+                                <option value="y_2002">2002</option>
+                                <option value="y_2006">2006</option>
+                                <option value="y_2011">2011</option>
+                                <option value="y_2016">2016</option>
+                                <option value="y_2022">2022</option>       
+                            </select>
+                        </section>
                     </section>
                 </section>
                 <div id="popup" class="popup">Updated chart type</div>
@@ -175,7 +206,11 @@
     const chartBtn = document.getElementById("checkboxSwitch");
     const chartPop = document.getElementById("popup");
 
+    const yearContainer = document.getElementById("yearContainer");
+
     chartBtn.addEventListener("click", () => {
+        yearContainer.style.display = "block";
+
         chartPop.classList.add("show");
         setTimeout(() => {
             popup.classList.remove("show");

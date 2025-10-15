@@ -345,6 +345,7 @@ input:checked + .slider:before {
 .checkbox-grid {
     display: grid;
     grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
     gap: 10px;  
     background-color: white;
     border-radius: 12px;
@@ -372,6 +373,10 @@ input:checked + .slider:before {
 .popup.show {
   visibility: visible;
   opacity: .65;
+}
+
+#yearContainer {
+    display: none;
 }
 
 footer {

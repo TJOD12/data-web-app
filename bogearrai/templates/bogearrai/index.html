@@ -234,5 +234,14 @@
             i.style.display = updateState;
         }
     }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.querySelector("form");
+        const yearSelect = document.getElementById("selectYear");
+        
+        if (yearSelect) {
+            yearSelect.selectedIndex = -1;
+        }
+    });
 </script>
 </html>

@@ -21,8 +21,8 @@ def draw(filtered_df, year, c1, c2, c3):
 
     title_string = 'Population of counties '+c1+', '+c2+', '+c3+', in '+ str(year)+"."
 
-    ax.set_xlabel("Population", fontsize=16)
-    ax.set_ylabel("County", fontsize=16)
+    ax.set_xlabel("County", fontsize=16)
+    ax.set_ylabel("Population", fontsize=16)
     ax.set_title(title_string, fontsize=14)
     ax.set_facecolor('#EEEEEE') 
     ax.legend(fontsize=14)

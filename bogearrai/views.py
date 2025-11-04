@@ -6,6 +6,9 @@ from .graphscripts import genbar as gb
 def home(request):
     return render(request, 'bogearrai/index.html')
 
+def collections(request):
+    return render(request, 'bogearrai/collections.html')
+
 def process_data(request):
     if request.method == "POST":
         county1 = request.POST.get("county1")
